@@ -1,0 +1,22 @@
+import random
+sillynumber = random.randint(0,100)
+
+    guess_loop = True
+    while guess_loop:
+    guesses = 0
+        guess = input("guess a number between 1 and 100")
+        guess =int(guess)
+        if guess > sillynumber:
+            print("your number is higher than than the computers number")
+        elif guess < sillynumber:
+            print("your number is lower than the computers number")
+            guesses +=1
+        elif guess == sillynumber:
+            print("you guessed it!")
+        if guesses < 16:
+            print("rank = sweet 16")
+        if guesses < 10:
+            print("rank = 1O")
+        if guesses < 6:
+            print()
+            guess_loop = False
