@@ -1,0 +1,47 @@
+import random
+
+keep_going = True
+while keep_going:
+
+    #Rock = 0  Paper = 1  scissors = 2
+    computer_choice = random.randint(0,2)
+    user_choice = input("choose Rock, Paper or scissors")
+
+    if user_choice == 'rock':
+        user_choice = 0
+    elif user_choice == 'paper':
+        user_choice = 1
+    elif user_choice == 'scissors':
+        user_choice = 2
+    awnser = user_choice - computer_choice
+    if computer_choice == 0:
+        print("computer chose rock")
+    elif computer_choice == 1:
+        print("computer chose paper")
+    elif computer_choice == 2:
+        print("computer chose scissors")
+    if awnser == 2:
+        print("computer wins!")
+    elif awnser == -2:
+        print("player wins!")
+    elif awnser == 1:
+        print("player wins!")
+    elif awnser == -1:
+        print("computer wins!")
+    elif awnser == 0:
+        print("its a tie!")
+
+    playing = input("do you wanna keep playing? Yes or No")
+    if playing == "Yes":
+        keep_going = True
+    elif playing == "No":
+        keep_going = False
+    elif playing == "secret setting":
+
+        win = input("Rock, Paper or Scissors?")
+        if win == "rock":
+            print("computer chooses scissors, you win!")
+        elif win == "paper":
+            print("computer chooses rock, you win!")
+        elif win == "scissors":
+            print("computer chooses paper, you win!")
